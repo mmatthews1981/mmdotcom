@@ -103,6 +103,7 @@
         setInterval(function () {
             if (counter === subtitles.length) { counter = 0; }
             console.log(subtitles[counter].innerText);
+            fadeOut(subtitles[counter]);
             counter += 1;
         }, 5000)
 
