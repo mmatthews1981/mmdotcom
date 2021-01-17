@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>meredithmatthews.com</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Coustard&family=Montserrat&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Coustard&family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <style>
     body {
         font-family: 'Montserrat', sans-serif;
     }
-    h1, h2, h3, h4, h5, h6 {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
         font-family: 'Coustard', serif;
     }
 </style>
+
 <body>
     <hgroup>
         <h1>Meredith Matthews</h1>
@@ -36,13 +44,13 @@
         </ul>
         <aside>
             <ul>
-                <li><a href="https://codepen.io/meredithmatthews">codepen.io</a></li>
-                <li><a href="https://github.com/mmatthews1981">github</a></li>
-                <li><a href="https://braindouche.itch.io/">itch.io</a></li>
-                <li><a href="https://www.linkedin.com/in/meredithmatthews/">linkedin</a></li>
-                <li><a href="https://soundcloud.com/braindouche">soundcloud</a></li>
-                <li><a href="https://www.zazzle.com/store/braindouche">zazzle</a></li>
-                <li><a href="https://www.thegamecrafter.com/games/deck">the game crafter</a></li>
+                <li><a href="https://codepen.io/meredithmatthews" target="_blank">codepen.io</a></li>
+                <li><a href="https://github.com/mmatthews1981" target="_blank">github</a></li>
+                <li><a href="https://braindouche.itch.io/" target="_blank">itch.io</a></li>
+                <li><a href="https://www.linkedin.com/in/meredithmatthews/" target="_blank">linkedin</a></li>
+                <li><a href="https://soundcloud.com/braindouche" target="_blank">soundcloud</a></li>
+                <li><a href="https://www.zazzle.com/store/braindouche" target="_blank">zazzle</a></li>
+                <li><a href="https://www.thegamecrafter.com/games/deck" target="_blank">the game crafter</a></li>
             </ul>
         </aside>
     </nav>
@@ -62,5 +70,44 @@
     </main>
 
     <footer>This is the footer.</footer>
+
+    <script>
+        // ** FADE OUT FUNCTION **
+        function fadeOut(el) {
+            el.style.opacity = 1;
+            (function fade() {
+                if ((el.style.opacity -= .1) < 0) {
+                    el.style.display = "none";
+                } else {
+                    requestAnimationFrame(fade);
+                }
+            })();
+        };
+
+        // ** FADE IN FUNCTION **
+        function fadeIn(el, display) {
+            el.style.opacity = 0;
+            el.style.display = display || "block";
+            (function fade() {
+                var val = parseFloat(el.style.opacity);
+                if (!((val += .1) > 1)) {
+                    el.style.opacity = val;
+                    requestAnimationFrame(fade);
+                }
+            })();
+        };
+
+        var subtitles = document.getElementsByTagName('h2');
+        var counter = 0;
+
+        setInterval(function () {
+            if (counter === subtitles.length) { counter = 0; }
+            console.log(subtitles[counter].innerText);
+            counter += 1;
+        }, 5000)
+
+
+    </script>
 </body>
+
 </html>
