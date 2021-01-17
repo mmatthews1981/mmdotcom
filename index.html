@@ -22,6 +22,21 @@
     h6 {
         font-family: 'Coustard', serif;
     }
+
+h2 {
+
+	height: 0;
+    opacity: 0;
+	overflow: hidden;
+	transition: height 1350ms ease-in-out, opacity 1750ms ease-in-out;
+}
+
+h2.is-visible {
+	display: block;
+	height: auto;
+  opacity: 1;
+}
+
 </style>
 
 <body>
@@ -72,38 +87,17 @@
     <footer>This is the footer.</footer>
 
     <script>
-        // ** FADE OUT FUNCTION **
-        function fadeOut(el) {
-            el.style.opacity = 1;
-            (function fade() {
-                if ((el.style.opacity -= .1) < 0) {
-                    el.style.display = "none";
-                } else {
-                    requestAnimationFrame(fade);
-                }
-            })();
-        };
-
-        // ** FADE IN FUNCTION **
-        function fadeIn(el, display) {
-            el.style.opacity = 0;
-            el.style.display = display || "block";
-            (function fade() {
-                var val = parseFloat(el.style.opacity);
-                if (!((val += .1) > 1)) {
-                    el.style.opacity = val;
-                    requestAnimationFrame(fade);
-                }
-            })();
-        };
 
         var subtitles = document.getElementsByTagName('h2');
         var counter = 0;
 
         setInterval(function () {
             if (counter === subtitles.length) { counter = 0; }
-            console.log(subtitles[counter].innerText);
-            fadeOut(subtitles[counter]);
+
+            for( var i = 0; i < subtitles.length; i += 1){
+               // fadeOut(subtitles[i]);
+            }
+            subtitles[counter].className = "is-visible";
             counter += 1;
         }, 5000)
 
