@@ -12,6 +12,8 @@
 <style>
     body {
         font-family: 'Montserrat', sans-serif;
+        background-color: #ddd;
+        color: #111;
     }
 
     h1,
@@ -21,6 +23,15 @@
     h5,
     h6 {
         font-family: 'Coustard', serif;
+        color: #404;
+    }
+
+    h1 {
+        text-transform: lowercase;
+    }
+
+    a{
+        color: #404;
     }
 
 /* h2 {
@@ -51,11 +62,12 @@ h2.is-visible {
 
     <nav>
         <ul>
+            <li>about me</li>
             <li>developer axioms</li>
             <li>articles</li>
             <li>games</li>
             <li>websites</li>
-            <li>the people who inspire me</li>
+            <li>inspirations</li>
         </ul>
         <aside>
             <ul>
@@ -72,15 +84,44 @@ h2.is-visible {
 
     <main>
         <article>
-            <p>This is my website.</p>
+            <h3>About Me</h3>
+            <p>I'm a front-end developer. I write HTML, CSS and Javascript code that runs in browsers and publishes information on the internet for people to find. Everything else is implementation details.</p>
         </article>
         <article>
-            <p>Axioms are good, actually.</p>
+            <h3>Developer Axioms</h3>
+            <!-- <p>Ok, fine, I'm clearly a nerd with a minimalist aesthetic and the sort of caffiene-guzzling bone-weary exhaustion that comes from having come of age in this industry during the era of Internet Explorer 6. Back then, I'd ride my dinosaur to the office and solve all of my clients problems by just deleting all of the Javscript on their pages and replacing half of it with a little server-side code. These days, I do the opposite: I get out of my flying car and pull PHP and Python out of websites and use Javascript to get information and present it to people. Times have certainly changed, though I'd argue the work fundamentally hasn't.</p>
+
+            <p>Look, I don't really care what your front-end stack consists of. I can learn that stuff, that's details, and ultimately temporary. What I want to know is, what do you value? What are your team's priorities? How do you concieve of your front-end architecture? How do you communicate those priorities?</p>
+
+            <p>If you want to know the details of my technical resume, you can look at my linkedin page, it'll give you an idea of what I've done, where, and how. However, I'd like to propose a new method of communicating what I bring to the table as a developer: developer axioms. I don't really want to tell you what I can do, I want to tell you how I think about projects, programs and solving problems. Developer axioms don't need to be clever, they don't need to be original, and they absolutely must not be comprehensive. They're the beginning of a conversation between a developer and a team, describing values and insights.</p> -->
+<!-- 
+            <p>Technology changes, and developers change with technologies. If you're really interested in all the different technologies I've touched over the years, you can get an idea of that by looking at my linkedin profile, but I don't think that should be your priority when hiring senior developer talent. Let me be perfectly clear: I'm pretty good at coding, but coding isn't the most valuable thing I do. I don't really care what your front-end stack consists of, because I can learn all that.</p>
+
+            <p>So what does all that mean, exactly? It means I've been a web developer professionally since 2007. I've survived the browser wars, the rise of WordPress, the fall of Ruby on Rails, and the day that Javascript ate everything to stand with you in the Era of Clientside Frameworks. It also means you should be a lot less interested in what I know and a lot more curious about how I think.</p>
+
+            <p>Look, let's be perfectly honest here</p> -->
             <ul>
-                <li>axiom</li>
-                <li>axiom</li>
-                <li>axiom</li>
+                <li>All code is a liability.</li>
+                <li>Always hide with CSS what a lesser developer would use javascript to hide with CSS.</li>
+                <li>Programmers that optimize for keystrokes are dangerous.</li>
+                <li>If you're manipulating your DOM because that's where your state is you're probably doing it wrong.</li>
+                <li>Git is awful to work with, a finely-tuned expression of Linus Torvald's hatred of humanity, and I never want to do another project without it.</li>
+                <li>Pineapple is required on every pizza.</li>
+                <li>You cannot prevent your stylesheet from cascading.</li>
+                <li>Software that has launched is better than software that has not launched.</li>
             </ul>
+        </article>
+        <article>
+            <h3>Articles</h3>
+        </article>
+        <article>
+            <h3>Games</h3>
+        </article>
+        <article>
+            <h3>Websites</h3>
+        </article>
+        <article>
+            <h3>People, Places and Things That I Like</h3>
         </article>
     </main>
 
